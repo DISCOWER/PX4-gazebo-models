@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <sdf version="1.9">
-  <world name="kth_space_lab">
+  <world name="kth_space_lab_fd">
     <physics type="ode">
       <max_step_size>0.004</max_step_size>
       <real_time_factor>1.0</real_time_factor>
@@ -377,5 +377,8 @@
         </visual>
       </link>
     </model>
+
+    <!-- Floor Uneveness Disturbance Plugin -->
+    <plugin name="floor_plugin::FloorPlugin" filename="libFloorPlugin.so"/>
   </world>
 </sdf>
