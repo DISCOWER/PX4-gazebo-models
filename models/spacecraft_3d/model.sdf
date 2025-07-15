@@ -51,7 +51,7 @@
                 <pose>0 0 0 0 0 -1.57080</pose>
                 <geometry>
                     <mesh>
-                        <uri>meshes/dart.dae</uri>
+                        <uri>meshes/atmos.glb</uri>
                     </mesh>
                 </geometry>
             </visual>
