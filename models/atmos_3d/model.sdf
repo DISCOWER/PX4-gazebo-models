@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sdf version="1.9">
-    <model name="kth_freeflyer_3d">
+    <model name="atmos_3d">
         <link name="base_link">
             <gravity>false</gravity>
             <inertial>
-                <pose>0 0 0 0 0 0</pose>
+                <pose>0 0 0.2 0 -0 0</pose>
                 <mass>17.8</mass>
                 <inertia>
                     <ixx>0.315</ixx>
@@ -37,18 +37,10 @@
                             <fdir1>0 0 1</fdir1>
                         </ode>
                     </friction>
-                    <bounce>
-		        <restitution_coefficient>0.6</restitution_coefficient>
-		        <threshold>0.0</threshold>
-		    </bounce>
                 </surface>
             </collision>
-            <velocity_decay>
-                <linear>0.0</linear>
-                <angular>0.0</angular>
-            </velocity_decay>
             <visual name="base_link_visual">
-                <pose>0 0 0 0 0 -1.57080</pose>
+                <pose>0 0 0 0 0 -1.57079</pose>
                 <geometry>
                     <mesh>
                         <uri>meshes/atmos.glb</uri>
@@ -131,7 +123,7 @@
             </sensor>
         </link>
         <joint name="thruster_0_joint" type="fixed">
-            <pose relative_to="base_link">0.0 0.12 0.0 0.0 1.57080 0.0</pose>
+            <pose relative_to="base_link">0.0 0.0 0.17 0.0 0.0 1.57079</pose>
             <parent>base_link</parent>
             <child>thruster_0</child>
             <axis>
@@ -171,7 +163,7 @@
             </inertial>
         </link>
         <joint name="thruster_1_joint" type="fixed">
-            <pose relative_to="base_link">0.0 0.12 0.0 0.0 -1.57080 0.0</pose>
+            <pose relative_to="base_link">0.0 0.0 0.17 0.0 0.0 -1.57079</pose>
             <parent>base_link</parent>
             <child>thruster_1</child>
             <axis>
@@ -211,7 +203,7 @@
             </inertial>
         </link>
         <joint name="thruster_2_joint" type="fixed">
-            <pose relative_to="base_link">0.0 -0.12 0.0 0.0 1.57080 0.0</pose>
+            <pose relative_to="base_link">0.0 0.0 -0.17 0.0 0.0 1.57079</pose>
             <parent>base_link</parent>
             <child>thruster_2</child>
             <axis>
@@ -251,7 +243,7 @@
             </inertial>
         </link>
         <joint name="thruster_3_joint" type="fixed">
-            <pose relative_to="base_link">0.0 -0.12 0.0 0.0 -1.57080 0.0</pose>
+            <pose relative_to="base_link">0.0 0.0 -0.17 0.0 0.0 -1.57079</pose>
             <parent>base_link</parent>
             <child>thruster_3</child>
             <axis>
@@ -291,7 +283,7 @@
             </inertial>
         </link>
         <joint name="thruster_4_joint" type="fixed">
-            <pose relative_to="base_link">0.0 0.0 0.12 1.57080 0.0 0.0</pose>
+            <pose relative_to="base_link">0.17 0.0 0.0 0.0 1.5708 0.0</pose>
             <parent>base_link</parent>
             <child>thruster_4</child>
             <axis>
@@ -331,7 +323,7 @@
             </inertial>
         </link>
         <joint name="thruster_5_joint" type="fixed">
-            <pose relative_to="base_link">0.0 0.0 0.12 -1.57080 0.0 0.0</pose>
+            <pose relative_to="base_link">0.17 0.0 0.0 0.0 -1.5708 0.0</pose>
             <parent>base_link</parent>
             <child>thruster_5</child>
             <axis>
@@ -371,7 +363,7 @@
             </inertial>
         </link>
         <joint name="thruster_6_joint" type="fixed">
-            <pose relative_to="base_link">0.0 0.0 -0.12 1.57080 0.0 0.0</pose>
+            <pose relative_to="base_link">-0.17 0.0 0.0 0.0 1.5708 0.0</pose>
             <parent>base_link</parent>
             <child>thruster_6</child>
             <axis>
@@ -411,7 +403,7 @@
             </inertial>
         </link>
         <joint name="thruster_7_joint" type="fixed">
-            <pose relative_to="base_link">0.0 0.0 -0.12 -1.57080 0.0 0.0</pose>
+            <pose relative_to="base_link">-0.17 0.0 0.0 0.0 -1.5708 0.0</pose>
             <parent>base_link</parent>
             <child>thruster_7</child>
             <axis>
@@ -451,7 +443,7 @@
             </inertial>
         </link>
         <joint name="thruster_8_joint" type="fixed">
-            <pose relative_to="base_link">-0.12 0.0 0.0 3.14159 0.0 0.0</pose>
+            <pose relative_to="base_link">0.0 0.17 0.0 0.0 0 0.0</pose>
             <parent>base_link</parent>
             <child>thruster_8</child>
             <axis>
@@ -491,7 +483,7 @@
             </inertial>
         </link>
         <joint name="thruster_9_joint" type="fixed">
-            <pose relative_to="base_link">-0.12 0.0 0.0 0.0 0.0 0.0</pose>
+            <pose relative_to="base_link">0.0 0.17 0.0 0.0 3.1416 0.0</pose>
             <parent>base_link</parent>
             <child>thruster_9</child>
             <axis>
@@ -531,7 +523,7 @@
             </inertial>
         </link>
         <joint name="thruster_10_joint" type="fixed">
-            <pose relative_to="base_link">0.12 0.0 0.0 3.14159 0.0 0.0</pose>
+            <pose relative_to="base_link">0.0 -0.17 0.0 0.0 0.0 0.0</pose>
             <parent>base_link</parent>
             <child>thruster_10</child>
             <axis>
@@ -571,7 +563,7 @@
             </inertial>
         </link>
         <joint name="thruster_11_joint" type="fixed">
-            <pose relative_to="base_link">0.12 0.0 0.0 0.0 0.0 0.0</pose>
+            <pose relative_to="base_link">0.0 -0.17 0.0 0.0 3.1415 0.0</pose>
             <parent>base_link</parent>
             <child>thruster_11</child>
             <axis>
@@ -610,92 +602,104 @@
                 </inertia>
             </inertial>
         </link>
-        <plugin filename="gz-sim-spacecraft-thruster-model-system" name="gz::sim::systems::SpacecraftThrusterModel">
+        <plugin filename="gz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher">
+            <dimensions>3</dimensions>
+        </plugin>
+        <plugin filename="libSpacecraftThrusterModelPlugin.so" name="gz::sim::systems::SpacecraftThrusterModel">
             <link_name>thruster_0</link_name>
             <actuator_number>0</actuator_number>
             <duty_cycle_frequency>10</duty_cycle_frequency>
+            <max_duty_cycle>10000</max_duty_cycle>
             <max_thrust>1.5</max_thrust>
-            <sub_topic>command/duty_cycle</sub_topic>
+            <sub_topic>command/motor_speed</sub_topic>
         </plugin>
-        <plugin filename="gz-sim-spacecraft-thruster-model-system" name="gz::sim::systems::SpacecraftThrusterModel">
+        <plugin filename="libSpacecraftThrusterModelPlugin.so" name="gz::sim::systems::SpacecraftThrusterModel">
             <link_name>thruster_1</link_name>
             <actuator_number>1</actuator_number>
             <duty_cycle_frequency>10</duty_cycle_frequency>
+            <max_duty_cycle>10000</max_duty_cycle>
             <max_thrust>1.5</max_thrust>
-            <sub_topic>command/duty_cycle</sub_topic>
+            <sub_topic>command/motor_speed</sub_topic>
         </plugin>
-        <plugin filename="gz-sim-spacecraft-thruster-model-system" name="gz::sim::systems::SpacecraftThrusterModel">
+        <plugin filename="libSpacecraftThrusterModelPlugin.so" name="gz::sim::systems::SpacecraftThrusterModel">
             <link_name>thruster_2</link_name>
             <actuator_number>2</actuator_number>
             <duty_cycle_frequency>10</duty_cycle_frequency>
+            <max_duty_cycle>10000</max_duty_cycle>
             <max_thrust>1.5</max_thrust>
-            <sub_topic>command/duty_cycle</sub_topic>
+            <sub_topic>command/motor_speed</sub_topic>
         </plugin>
-        <plugin filename="gz-sim-spacecraft-thruster-model-system" name="gz::sim::systems::SpacecraftThrusterModel">
+        <plugin filename="libSpacecraftThrusterModelPlugin.so" name="gz::sim::systems::SpacecraftThrusterModel">
             <link_name>thruster_3</link_name>
             <actuator_number>3</actuator_number>
             <duty_cycle_frequency>10</duty_cycle_frequency>
+            <max_duty_cycle>10000</max_duty_cycle>
             <max_thrust>1.5</max_thrust>
-            <sub_topic>command/duty_cycle</sub_topic>
+            <sub_topic>command/motor_speed</sub_topic>
         </plugin>
-        <plugin filename="gz-sim-spacecraft-thruster-model-system" name="gz::sim::systems::SpacecraftThrusterModel">
+        <plugin filename="libSpacecraftThrusterModelPlugin.so" name="gz::sim::systems::SpacecraftThrusterModel">
             <link_name>thruster_4</link_name>
             <actuator_number>4</actuator_number>
             <duty_cycle_frequency>10</duty_cycle_frequency>
+            <max_duty_cycle>10000</max_duty_cycle>
             <max_thrust>1.5</max_thrust>
-            <sub_topic>command/duty_cycle</sub_topic>
+            <sub_topic>command/motor_speed</sub_topic>
         </plugin>
-        <plugin filename="gz-sim-spacecraft-thruster-model-system" name="gz::sim::systems::SpacecraftThrusterModel">
+        <plugin filename="libSpacecraftThrusterModelPlugin.so" name="gz::sim::systems::SpacecraftThrusterModel">
             <link_name>thruster_5</link_name>
             <actuator_number>5</actuator_number>
             <duty_cycle_frequency>10</duty_cycle_frequency>
+            <max_duty_cycle>10000</max_duty_cycle>
             <max_thrust>1.5</max_thrust>
-            <sub_topic>command/duty_cycle</sub_topic>
+            <sub_topic>command/motor_speed</sub_topic>
         </plugin>
-        <plugin filename="gz-sim-spacecraft-thruster-model-system" name="gz::sim::systems::SpacecraftThrusterModel">
+        <plugin filename="libSpacecraftThrusterModelPlugin.so" name="gz::sim::systems::SpacecraftThrusterModel">
             <link_name>thruster_6</link_name>
             <actuator_number>6</actuator_number>
             <duty_cycle_frequency>10</duty_cycle_frequency>
+            <max_duty_cycle>10000</max_duty_cycle>
             <max_thrust>1.5</max_thrust>
-            <sub_topic>command/duty_cycle</sub_topic>
+            <sub_topic>command/motor_speed</sub_topic>
         </plugin>
-        <plugin filename="gz-sim-spacecraft-thruster-model-system" name="gz::sim::systems::SpacecraftThrusterModel">
+        <plugin filename="libSpacecraftThrusterModelPlugin.so" name="gz::sim::systems::SpacecraftThrusterModel">
             <link_name>thruster_7</link_name>
             <actuator_number>7</actuator_number>
             <duty_cycle_frequency>10</duty_cycle_frequency>
+            <max_duty_cycle>10000</max_duty_cycle>
             <max_thrust>1.5</max_thrust>
-            <sub_topic>command/duty_cycle</sub_topic>
+            <sub_topic>command/motor_speed</sub_topic>
         </plugin>
-        <plugin filename="gz-sim-spacecraft-thruster-model-system" name="gz::sim::systems::SpacecraftThrusterModel">
+        <plugin filename="libSpacecraftThrusterModelPlugin.so" name="gz::sim::systems::SpacecraftThrusterModel">
             <link_name>thruster_8</link_name>
             <actuator_number>8</actuator_number>
             <duty_cycle_frequency>10</duty_cycle_frequency>
+            <max_duty_cycle>10000</max_duty_cycle>
             <max_thrust>1.5</max_thrust>
-            <sub_topic>command/duty_cycle</sub_topic>
+            <sub_topic>command/motor_speed</sub_topic>
         </plugin>
-        <plugin filename="gz-sim-spacecraft-thruster-model-system" name="gz::sim::systems::SpacecraftThrusterModel">
+        <plugin filename="libSpacecraftThrusterModelPlugin.so" name="gz::sim::systems::SpacecraftThrusterModel">
             <link_name>thruster_9</link_name>
             <actuator_number>9</actuator_number>
             <duty_cycle_frequency>10</duty_cycle_frequency>
+            <max_duty_cycle>10000</max_duty_cycle>
             <max_thrust>1.5</max_thrust>
-            <sub_topic>command/duty_cycle</sub_topic>
+            <sub_topic>command/motor_speed</sub_topic>
         </plugin>
-        <plugin filename="gz-sim-spacecraft-thruster-model-system" name="gz::sim::systems::SpacecraftThrusterModel">
+        <plugin filename="libSpacecraftThrusterModelPlugin.so" name="gz::sim::systems::SpacecraftThrusterModel">
             <link_name>thruster_10</link_name>
             <actuator_number>10</actuator_number>
             <duty_cycle_frequency>10</duty_cycle_frequency>
+            <max_duty_cycle>10000</max_duty_cycle>
             <max_thrust>1.5</max_thrust>
-            <sub_topic>command/duty_cycle</sub_topic>
+            <sub_topic>command/motor_speed</sub_topic>
         </plugin>
-        <plugin filename="gz-sim-spacecraft-thruster-model-system" name="gz::sim::systems::SpacecraftThrusterModel">
+        <plugin filename="libSpacecraftThrusterModelPlugin.so" name="gz::sim::systems::SpacecraftThrusterModel">
             <link_name>thruster_11</link_name>
             <actuator_number>11</actuator_number>
             <duty_cycle_frequency>10</duty_cycle_frequency>
+            <max_duty_cycle>10000</max_duty_cycle>
             <max_thrust>1.5</max_thrust>
-            <sub_topic>command/duty_cycle</sub_topic>
-        </plugin>
-        <plugin filename="gz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher">
-            <dimensions>3</dimensions>
+            <sub_topic>command/motor_speed</sub_topic>
         </plugin>
     </model>
 </sdf>
