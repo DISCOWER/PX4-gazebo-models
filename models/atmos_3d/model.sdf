@@ -61,7 +61,7 @@
             </sensor>
             <sensor name="imu_sensor" type="imu">
                 <always_on>1</always_on>
-                <update_rate>250</update_rate>
+                <update_rate>200</update_rate>
                 <imu>
                     <angular_velocity>
                         <x>
@@ -227,7 +227,6 @@
             </physics>
         </joint>
         <link name="thruster_2">
-            <gravity>false</gravity>
             <pose relative_to="thruster_2_joint">0 0 0 0 0 0</pose>
             <inertial>
                 <pose>0 0 0 0 0 0</pose>
@@ -267,7 +266,6 @@
             </physics>
         </joint>
         <link name="thruster_3">
-            <gravity>false</gravity>
             <pose relative_to="thruster_3_joint">0 0 0 0 0 0</pose>
             <inertial>
                 <pose>0 0 0 0 0 0</pose>
@@ -307,7 +305,6 @@
             </physics>
         </joint>
         <link name="thruster_4">
-            <gravity>false</gravity>
             <pose relative_to="thruster_4_joint">0 0 0 0 0 0</pose>
             <inertial>
                 <pose>0 0 0 0 0 0</pose>
@@ -347,7 +344,6 @@
             </physics>
         </joint>
         <link name="thruster_5">
-            <gravity>false</gravity>
             <pose relative_to="thruster_5_joint">0 0 0 0 0 0</pose>
             <inertial>
                 <pose>0 0 0 0 0 0</pose>
@@ -387,7 +383,6 @@
             </physics>
         </joint>
         <link name="thruster_6">
-            <gravity>false</gravity>
             <pose relative_to="thruster_6_joint">0 0 0 0 0 0</pose>
             <inertial>
                 <pose>0 0 0 0 0 0</pose>
@@ -427,7 +422,6 @@
             </physics>
         </joint>
         <link name="thruster_7">
-            <gravity>false</gravity>
             <pose relative_to="thruster_7_joint">0 0 0 0 0 0</pose>
             <inertial>
                 <pose>0 0 0 0 0 0</pose>
@@ -467,7 +461,6 @@
             </physics>
         </joint>
         <link name="thruster_8">
-            <gravity>false</gravity>
             <pose relative_to="thruster_8_joint">0 0 0 0 0 0</pose>
             <inertial>
                 <pose>0 0 0 0 0 0</pose>
@@ -507,7 +500,6 @@
             </physics>
         </joint>
         <link name="thruster_9">
-            <gravity>false</gravity>
             <pose relative_to="thruster_9_joint">0 0 0 0 0 0</pose>
             <inertial>
                 <pose>0 0 0 0 0 0</pose>
@@ -547,7 +539,6 @@
             </physics>
         </joint>
         <link name="thruster_10">
-            <gravity>false</gravity>
             <pose relative_to="thruster_10_joint">0 0 0 0 0 0</pose>
             <inertial>
                 <pose>0 0 0 0 0 0</pose>
@@ -587,7 +578,6 @@
             </physics>
         </joint>
         <link name="thruster_11">
-            <gravity>false</gravity>
             <pose relative_to="thruster_11_joint">0 0 0 0 0 0</pose>
             <inertial>
                 <pose>0 0 0 0 0 0</pose>
